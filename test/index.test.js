@@ -51,7 +51,9 @@ describe('Dates module', () => {
       'Tuesday',
       'Wednesday',
       'Thursday',
-      'Friday'
+      'Friday', //Was very confused when I tried to test and it failed here. 
+      'Saturday', //Added Sat & Sun
+      'Sunday'
     ]
 
     const day = dates.today()
