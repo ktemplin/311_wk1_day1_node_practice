@@ -5,7 +5,7 @@ const isEven = (num) => {
 
 const sum = (arr) => {
   // write code for numbers.sum
-  sumNum = arr.reduce((a, b) => a+b, 0)
+  sumNum = arr.reduce((a, b) => a + b, 0)
   return sumNum
 }
 
@@ -13,25 +13,24 @@ const comboSum = (arr, sum) => {
   // write code for numbers.comboSum
   // sumOfNums = arr.reduce((a, b) => a+b)
   let combinationFound = false
-  
-// Loop through each combination of numbers
-for (var i = 0; i < arr.length; i++) {
-  for (var j = i + 1; j < arr.length; j++) {
-    if (arr[i] + arr[j] === sum) {
-      console.log("Combination found:", arr[i], "+", arr[j], "=", sum);
-      combinationFound = true;
-       break; 
-     }
-   }
-   if (combinationFound) {
-    return true
-     break; 
-   }
-}
-if (!combinationFound) {
-  return false
-  // console.log("No combination found.");
-}
+
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === sum) {
+        // console.log("Combination found:", arr[i], "+", arr[j], "=", sum);
+        combinationFound = true;
+        break;
+      }
+    }
+    if (combinationFound) {
+      return true
+      break;
+    }
+  }
+  if (!combinationFound) {
+    return false
+    // console.log("No combination found.");
+  }
 }
 
 
